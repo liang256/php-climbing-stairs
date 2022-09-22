@@ -6,21 +6,18 @@ class Solution {
      * @return Integer
      */
     function climbStairs($n) {
-        return $this->dfs($n);
-    }
-
-    private function dfs($n, &$dp = []): int {
-        if (array_key_exists($n, $dp)) {
-            return $dp[$n];
-        }
-        
-        if ($n == 0) {
-            return 1;
-        } elseif ($n < 0) {
+        if ($n < 0) {
             return 0;
+        } elseif ($n <= 1) {
+            return 1;
         }
-        
-        $dp[$n] = $this->dfs($n-1, $dp) + $this->dfs($n-2, $dp);
-        return $dp[$n];
+        $prev1 = 1;
+        $prev2 = 1;
+        for ($i = 2; $i <= $n; $i++) {
+            $tmp = $prev1 + $prev2;
+            $prev1 = $prev2;
+            $prev2 = $tmp;
+        }
+        return $prev2;
     }
 }
