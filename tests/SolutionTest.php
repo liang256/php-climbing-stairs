@@ -4,7 +4,25 @@ use PHPUnit\Framework\TestCase;
 
 final class SolutionTest extends TestCase
 {
-    public function testNIs2(): void
+    public function testNegitive(): void
+    {
+        $s = new Solution;
+        $this->assertEquals(
+            0,
+            $s->climbStairs(-1)
+        );
+    }
+
+    public function test1(): void
+    {
+        $s = new Solution;
+        $this->assertEquals(
+            1,
+            $s->climbStairs(1)
+        );
+    }
+
+    public function test2(): void
     {
         $s = new Solution;
         $this->assertEquals(
@@ -13,7 +31,7 @@ final class SolutionTest extends TestCase
         );
     }
 
-    public function testNIs45(): void
+    public function test45(): void
     {
         $s = new Solution;
         $this->assertEquals(
