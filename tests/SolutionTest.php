@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 final class SolutionTest extends TestCase
 {
-    public function testNegitive(): void
+    public function test_n_is_negative(): void
     {
         $s = new Solution;
         $this->assertEquals(
@@ -13,7 +13,7 @@ final class SolutionTest extends TestCase
         );
     }
 
-    public function test1(): void
+    public function test_n_is_1(): void
     {
         $s = new Solution;
         $this->assertEquals(
@@ -22,7 +22,7 @@ final class SolutionTest extends TestCase
         );
     }
 
-    public function test2(): void
+    public function test_n_is_2(): void
     {
         $s = new Solution;
         $this->assertEquals(
@@ -31,7 +31,7 @@ final class SolutionTest extends TestCase
         );
     }
 
-    public function test45(): void
+    public function test_n_is_45(): void
     {
         $s = new Solution;
         $this->assertEquals(
