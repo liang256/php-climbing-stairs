@@ -1,3 +1,6 @@
+# PHP Climbing Stairs
+A simple repo that implements the solution of climbing stairs with unit tests.
+
 ## Use Docker to Install Dependencies and Run Tests
 0. You have installed Docker
 1. Install dependencies
